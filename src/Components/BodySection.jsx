@@ -8,7 +8,7 @@ function BodySection() {
     const [users,setUsers]=useState(null)
 
     useEffect(()=>{
-     axios.get("https://api.unsplash.com/photos/random?client_id=Ck5sapqM1WLhNyxIfioZrr29hFDyJc7QO25T492HC6Y&count=12").then((response)=>{
+     axios.get("https://api.unsplash.com/photos/random?client_id='Your Access Key from Unsplash'&count=12").then((response)=>{
         console.log("Data",response.data)
         setUsers(response.data)
      }).catch((e)=>console.log('Error fetching Data',e))
