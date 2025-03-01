@@ -9,7 +9,7 @@ function HeaderSection() {
     const [users,setUsers]=useState(null)
 
     useEffect(()=>{
-     axios.get("https://api.unsplash.com/photos/random?client_id=Ck5sapqM1WLhNyxIfioZrr29hFDyJc7QO25T492HC6Y&count=9").then((response)=>{
+     axios.get("https://api.unsplash.com/photos/random?client_id='Your Acces Key from Unsplash'&count=9").then((response)=>{
         console.log("Data",response.data)
         setUsers(response.data)
      }).catch((e)=>console.log('Error fetching Data',e))
